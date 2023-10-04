@@ -29,6 +29,6 @@ public class Weapon : ScriptableObject
     {
         Weapon newWeaponAsset = ScriptableObject.CreateInstance<Weapon>();
         newWeaponAsset.DamageValue = 35;
-        AssetDatabase.CreateAsset(newWeaponAsset, "Assets/Datas/Whip_Weapon.asset");
+        AssetDatabase.CreateAsset(newWeaponAsset, "Assets/ScriptableObject/Datas/Whip_Weapon.asset");
     }
 }

@@ -17,11 +17,5 @@ public class ScriptableObjectInstanciator : MonoBehaviour
         }
 
         _scriptableToInstanciante = Instantiate(_scriptableToInstanciante);
-        TestParams();
-    }
-
-    private void TestParams(params int[] arguments)
-    {
-        
     }
 }
