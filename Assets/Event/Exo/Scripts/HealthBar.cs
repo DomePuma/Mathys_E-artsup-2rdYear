@@ -15,13 +15,8 @@ public class HealthBar : MonoBehaviour
         EventInt.EventInt += ChangeHealthBar;
     }
 
-    public void OnEnableCharacter()
+    private void ChangeHealthBar(int healthAmount)
     {
-        
-    }
-    
-    private void ChangeHealthBar(int healthAmounth)
-    {
-        healthBar.fillAmount -= healthAmounth * 0.01f;
+        healthBar.fillAmount -= healthAmount * 0.01f;
     }
 }
