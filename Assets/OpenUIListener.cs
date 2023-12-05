@@ -3,6 +3,7 @@ using UnityEngine;
 public class OpenUIListener : MonoBehaviour
 {
     [SerializeField] GameObject UIMenu;
+    private bool _uiState;
     private void OnEnable() 
     {
         ScriptableEventUI.OpenUIAction += OpenUI;
@@ -12,8 +13,8 @@ public class OpenUIListener : MonoBehaviour
         ScriptableEventUI.OpenUIAction -= OpenUI;
     }
 
-    private void OpenUI()
+    private void OpenUI(bool state)
     {
-        UIMenu.SetActive(true);
+        UIMenu.SetActive(state);
     }
 }
