@@ -7,7 +7,6 @@ public class CircleDetection : MonoBehaviour
     public float CircleSize => circleSize; 
     private void OnDrawGizmos() 
     {
-        
         if(DistanceVector(transform.position,circleDetection.transform.position) <= (circleSize + circleDetection.CircleSize)*(circleSize + circleDetection.CircleSize) )
         {
             Gizmos.color = Color.green;
