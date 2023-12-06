@@ -4,14 +4,19 @@ public class CircleGizmos : MonoBehaviour
 {
     [SerializeField] [Range(0,10)] private float circleSize;
     [SerializeField] GameObject point;
-
     private void OnDrawGizmos() 
     {
-        if(Vector2.Distance(transform.position,point.transform.position) <= circleSize)
+        if(DistanceVector(transform.position,point.transform.position) <= circleSize * circleSize)
         {
             Gizmos.color = Color.green;
         }
         Gizmos.DrawSphere(transform.position, circleSize);
+    }
+    private float DistanceVector(Vector2 circle, Vector2 point)
+    {
+        float num = circle.x - point.x;
+        float num2 = circle.y - point.y;
+        return num * num + num2 * num2;
     }
 }
 
