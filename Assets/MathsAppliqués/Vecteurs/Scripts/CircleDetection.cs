@@ -1,12 +1,14 @@
 using UnityEngine;
 
-public class CircleGizmos : MonoBehaviour
+public class CircleDetection : MonoBehaviour
 {
     [SerializeField] [Range(0,10)] private float circleSize;
-    [SerializeField] GameObject point;
+    [SerializeField] CircleDetection circleDetection;
+    public float CircleSize => circleSize; 
     private void OnDrawGizmos() 
     {
-        if(DistanceVector(transform.position,point.transform.position) <= circleSize * circleSize)
+        
+        if(DistanceVector(transform.position,circleDetection.transform.position) <= (circleSize + circleDetection.CircleSize)*(circleSize + circleDetection.CircleSize) )
         {
             Gizmos.color = Color.green;
         }
