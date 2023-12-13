@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CreateShape : MonoBehaviour
 {
-    [SerializeField, Range(2, 100)] private int numberPointsShape;
+    [SerializeField, Range(2, 10)] private int numberPointsShape;
     private const float Tau = 2 * Mathf.PI;
     private float _angle;
     private void OnDrawGizmos() 
