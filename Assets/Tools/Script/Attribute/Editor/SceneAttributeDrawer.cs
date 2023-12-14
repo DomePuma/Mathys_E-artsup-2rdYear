@@ -1,32 +1,43 @@
 using UnityEngine;
 using UnityEditor;
 using System.IO;
+using System;
 
 [CustomPropertyDrawer(typeof(SceneAttribute))]
 public class SceneAttributeDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty serializedProperty, GUIContent label) 
     {
-        string[] scenesNameArray = new string[EditorBuildSettings.scenes.Length];
-        if(serializedProperty.propertyType == SerializedPropertyType.Integer)
+        
+        string[] sceneNameArray = Array.ConvertAll(EditorBuildSettings.scenes, (EditorBuildSettingsScene scene) =>
         {
-            for(int i = 0; i < EditorBuildSettings.scenes.Length; i++)
+            return Path.GetFileNameWithoutExtension(scene.path);
+        });
+
+        if (serializedProperty.propertyType == SerializedPropertyType.Integer)
+        {
+            using (new EditorGUI.PropertyScope(position, label, serializedProperty))
             {
-                scenesNameArray[i] = Path.GetFileNameWithoutExtension(EditorBuildSettings.scenes[i].path);
+                serializedProperty.intValue = EditorGUI.Popup(position, label.text, serializedProperty.intValue, sceneNameArray);
             }
-            serializedProperty.intValue = EditorGUI.Popup(position, label.text, serializedProperty.intValue, scenesNameArray);
         }
-        if(serializedProperty.propertyType == SerializedPropertyType.String)
+        else if (serializedProperty.propertyType == SerializedPropertyType.String)
         {
-            for(int i = 0; i < EditorBuildSettings.scenes.Length; i++)
+            using (new EditorGUI.PropertyScope(position, label, serializedProperty))
             {
-                scenesNameArray[i] = Path.GetFileNameWithoutExtension(EditorBuildSettings.scenes[i].path);
+                int sceneIndex = Array.IndexOf(sceneNameArray, serializedProperty.stringValue);
+                sceneIndex = EditorGUI.Popup(position, label.text, sceneIndex, sceneNameArray);
+                serializedProperty.stringValue = sceneNameArray[sceneIndex];
             }
-            serializedProperty.intValue = EditorGUI.Popup(position, label.text, serializedProperty.intValue, scenesNameArray);   
         }
-        if(EditorGUI.DropdownButton(position, GUIContent.none, FocusType.Passive) == true)
+        else
         {
-            serializedProperty.intValue++;
+            using (new EditorGUI.PropertyScope(position, label, serializedProperty))
+            {
+                GUI.color = Color.red;
+                EditorGUI.LabelField(position, "Error : Unvailable property type.");
+
+            }
         }
     }
 }

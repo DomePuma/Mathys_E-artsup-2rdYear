@@ -439,9 +439,9 @@ MonoBehaviour:
   _stats:
     healthValue: 0
     manaValue: 0
-  _sampleText: AAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH
-  _sceneName: 
-  _sceneIndex: 1
+  _sampleText: Test
+  _sceneName: SampleScene
+  _sceneIndex: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
