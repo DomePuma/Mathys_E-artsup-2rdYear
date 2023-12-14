@@ -20,6 +20,3 @@ public class CircleDetection : MonoBehaviour
         return num * num + num2 * num2;
     }
 }
-
-
-//Longueur de la distance centre du cercle -> point est plus petite ou égale au rayon du cercle alors le point est dans le cercle
