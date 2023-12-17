@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class OpenUIListener : MonoBehaviour
 {
-    [SerializeField] private GameObject[] UIMenu;
+    [SerializeField] private GameObject[] _UIMenu;
 
     private void OnEnable() 
     {
@@ -18,13 +18,13 @@ public class OpenUIListener : MonoBehaviour
     {
         if(state)
         {
-            UIMenu[0].SetActive(state);
+            _UIMenu[0].SetActive(state);
         }
         else
         {
-            UIMenu[0].SetActive(state);
-            UIMenu[1].SetActive(state);
-            UIMenu[2].SetActive(state);
+            _UIMenu[0].SetActive(state);
+            _UIMenu[1].SetActive(state);
+            _UIMenu[2].SetActive(state);
         }
     }
 }
