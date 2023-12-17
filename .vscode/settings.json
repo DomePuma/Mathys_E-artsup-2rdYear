@@ -51,6 +51,4 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Mathys_E-artsup-2rdYear.sln",
-    "dotnet.preferCSharpExtension": true
 }

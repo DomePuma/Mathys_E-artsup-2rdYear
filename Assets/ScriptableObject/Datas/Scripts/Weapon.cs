@@ -8,15 +8,8 @@ public class Weapon : ScriptableObject
     
     public int DamageValue { get => _damageValue; set => _damageValue = value; }
 
-
-    private void Awake()
-    {
-        Debug.Log("Weapon::Awake");
-    }
-
     private void OnEnable()
     {
-        Debug.Log("Weapon::OnEnable");
         _damageValue += 10;
     }
 
@@ -24,6 +17,7 @@ public class Weapon : ScriptableObject
     {
         Debug.Log("Attack");
     }
+    
     [ContextMenu("Create Asset From Scriptable Reference")]
     private void CreateAssetFromScriptableReference()
     {
