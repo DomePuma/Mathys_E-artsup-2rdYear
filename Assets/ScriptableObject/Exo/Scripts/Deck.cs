@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -6,8 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new_Deck", menuName = "Project/NewDeckOfCard")]
 public class Deck : ScriptableObject
 {
-    [SerializeField] 
-    private List<Card> _deck;
+    [SerializeField] private List<Card> _deck;
     
     public List<Card> DeckOfCard => _deck;
 

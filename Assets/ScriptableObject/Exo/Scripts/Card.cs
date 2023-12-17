@@ -1,10 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.VersionControl;
 using UnityEngine;
-using UnityEngine.WSA;
 
 public class Card : ScriptableObject
 {
@@ -33,10 +29,8 @@ public class Card : ScriptableObject
     }
 
     private Card[] _deckCards;
-    [SerializeField]
-    private CardColor _cardColor;
-    [SerializeField]
-    private CardValue _cardValue;
+    [SerializeField] private CardColor _cardColor;
+    [SerializeField] private CardValue _cardValue;
 
     [MenuItem("CardProject/GenerateDeck")]
     private static void GenerationDeck()
@@ -54,9 +48,6 @@ public class Card : ScriptableObject
                 newCardAsset._cardValue = cardValue;
                 AssetDatabase.CreateAsset(newCardAsset, "Assets/ScriptableObject/Exo/Deck/" + cardColor.ToString() + "/" + cardColor.ToString() + "_" + cardValue + ".asset");
             }
-        }
-
-        
+        }  
     }
-
 }
