@@ -6,9 +6,7 @@ public class CustomEditorComponent : MonoBehaviour
 
     [SerializeField] private string _sampleText;
 
-    [SerializeField, Scene]
-    private string _sceneName;
+    [SerializeField, Scene] private string _sceneName;
     
-    [SerializeField, Scene]
-    private int _sceneIndex;
+    [SerializeField, Scene] private int _sceneIndex;
 }

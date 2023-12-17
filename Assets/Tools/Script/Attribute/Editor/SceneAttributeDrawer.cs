@@ -36,7 +36,6 @@ public class SceneAttributeDrawer : PropertyDrawer
             {
                 GUI.color = Color.red;
                 EditorGUI.LabelField(position, "Error : Unvailable property type.");
-
             }
         }
     }
