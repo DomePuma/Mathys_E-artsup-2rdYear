@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SelectFirstToggle : MonoBehaviour
 {
     [SerializeField] Toggle toggle;
+    
     private void OnEnable()
     {
         toggle.Select();

@@ -8,6 +8,5 @@ public class SelectFirstButton : MonoBehaviour
     private void OnEnable()
     {
         button.Select();
-    }
-    
+    } 
 }

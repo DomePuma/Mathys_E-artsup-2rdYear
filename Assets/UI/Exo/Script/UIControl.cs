@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class UIControl : MonoBehaviour
 {
-    [SerializeField] public GameObject selection;
-    [SerializeField] public GameObject inventory;
-    [SerializeField] public GameObject parameter;
+    [SerializeField] private GameObject selection;
+    [SerializeField] private GameObject inventory;
+    [SerializeField] private GameObject parameter;
 
-    bool _isSelectionActive;
+    private bool _isSelectionActive;
 
     public void ActivationSelection()
     {
