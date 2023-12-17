@@ -3,33 +3,31 @@ using UnityEngine;
 
 public class CreateShape : MonoBehaviour
 {
-    [SerializeField, Range(2, 10)] private int numberPointsShape;
     private const float Tau = 2 * Mathf.PI;
+    [SerializeField, Range(2, 10)] private int _numberPointsShape;
     private float _angle;
+    
     private void OnDrawGizmos() 
     {
         Handles.color = Color.yellow;
         
-        Vector2[] PointArray = new Vector2[numberPointsShape];
+        Vector2[] pointArray = new Vector2[_numberPointsShape];
         
-        
-        for(int index = 0; index < numberPointsShape; index++)
+        for(int index = 0; index < _numberPointsShape; index++)
         {
-            _angle = Tau / numberPointsShape;
+            _angle = Tau / _numberPointsShape;
             _angle *= index + 1;
             float x = Mathf.Cos(_angle) + transform.position.x;
             float y = Mathf.Sin(_angle) + transform.position.y;
             Vector2 nextPoint = new Vector2(x,y);
-            PointArray[index] = nextPoint;
+            pointArray[index] = nextPoint;
         }
 
-        Handles.DrawLine(PointArray[PointArray.Length - 1], PointArray[0]);
+        Handles.DrawLine(pointArray[pointArray.Length - 1], pointArray[0]);
 
-        for (int i = 1; i < PointArray.Length; i++)
+        for (int i = 1; i < pointArray.Length; i++)
         {
-            Handles.DrawLine(PointArray[i-1], PointArray[i]);
-        }
-        
+            Handles.DrawLine(pointArray[i-1], pointArray[i]);
+        } 
     }
-    
 }

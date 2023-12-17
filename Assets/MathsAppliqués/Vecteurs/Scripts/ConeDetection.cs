@@ -6,7 +6,8 @@ public class ConeDetection : MonoBehaviour
     [SerializeField] private Transform otherObject;
 
     [SerializeField, Range(0,10)] private float radiusDetection; 
-    void OnDrawGizmos() 
+    
+    private void OnDrawGizmos() 
     {
 	    Vector2 dirTowardsOtherObject = otherObject.position - transform.position;
 	    float dotProduct = Vector2.Dot(dirTowardsOtherObject, transform.right);
