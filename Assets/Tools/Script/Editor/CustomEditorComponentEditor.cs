@@ -16,12 +16,12 @@ public class CustomEditorComponentEditor : Editor
         sceneIndexProp = serializedObject.FindProperty("_sceneIndex");
         sceneNameProp = serializedObject.FindProperty("_sceneName");
     }
+    
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
         EditorGUILayout.LabelField(nameProp.stringValue);
         
-
         using (new GUILayout.HorizontalScope("box"))
         {
             if(GUILayout.Button("-1"))
@@ -37,6 +37,5 @@ public class CustomEditorComponentEditor : Editor
         nameProp.serializedObject.ApplyModifiedProperties();
         statsProp.serializedObject.ApplyModifiedProperties();
         sceneIndexProp.serializedObject.ApplyModifiedProperties();
-        
     }
 }

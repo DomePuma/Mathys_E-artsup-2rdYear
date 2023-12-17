@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 public class CustomComponent : MonoBehaviour
 {
     [SerializeField, Scene] private int _scene;
-    //[SerializeField, Scene] private int _errorScene;
 
     [ContextMenu("Load Scene")] 
     private void LoadScene()
     {
-
         if(Application.isPlaying)
         {
             SceneManager.LoadScene(_scene);
