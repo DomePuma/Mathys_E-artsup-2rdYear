@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d169dbe45fa7c49ab78e8fb6b81862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberPointsShape: 8
+  _numberPointsShape: 2
 --- !u!4 &623137342
 Transform:
   m_ObjectHideFlags: 0
