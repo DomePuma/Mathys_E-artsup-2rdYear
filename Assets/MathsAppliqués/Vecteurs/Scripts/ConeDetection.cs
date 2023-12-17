@@ -9,8 +9,9 @@ public class ConeDetection : MonoBehaviour
     
     private void OnDrawGizmos() 
     {
-	    Vector2 dirTowardsOtherObject = otherObject.position - transform.position;
-	    float dotProduct = Vector2.Dot(dirTowardsOtherObject, transform.right);
+        Vector2 dirTowardsOtherObject = otherObject.position - transform.position;
+        float dotProduct = Vector2.Dot(dirTowardsOtherObject, transform.right);
+        
         if(dotProduct >= 0.4)
         {
             Debug.Log("ça marche || Dot Product");
@@ -21,6 +22,7 @@ public class ConeDetection : MonoBehaviour
         }
 	    
         Vector2 dirTowardsOtherObjectAngleMethod = otherObject.position - transform.position;
+        
         if(dirTowardsOtherObjectAngleMethod.sqrMagnitude < radiusDetection * radiusDetection)
         {
             Debug.Log("ça marche || Angle");
