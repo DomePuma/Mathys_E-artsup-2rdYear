@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -933,9 +933,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822ac081e9dbdb14686249f00f4e4e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRigidbody: {fileID: 1719532148}
-  moveSpeed: 50
-  playerOrientation: {fileID: 218471993}
+  _playerRigidbody: {fileID: 1719532148}
+  _moveSpeed: 10
+  _playerOrientation: {fileID: 218471993}
 --- !u!136 &1719532151
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -1294,7 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb00e337367d6143b67273b57dcb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstButtonSelected: {fileID: 1868960594}
+  _firstButtonSelected: {fileID: 1868960594}
 --- !u!1 &462014947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcb8e8b3ef99b94d90783db109182c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstToggleSelected: {fileID: 448937616}
+  _firstToggleSelected: {fileID: 448937616}
 --- !u!1 &894647246
 GameObject:
   m_ObjectHideFlags: 0
@@ -5186,7 +5186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb00e337367d6143b67273b57dcb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstButtonSelected: {fileID: 462014949}
+  _firstButtonSelected: {fileID: 462014949}
 --- !u!1 &2046870165
 GameObject:
   m_ObjectHideFlags: 0
