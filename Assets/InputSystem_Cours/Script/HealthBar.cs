@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private ScriptableEventInt EventInt;
-    private UnityEngine.UI.Image healthBar;
+    [SerializeField] private ScriptableEventInt _eventInt;
+    private UnityEngine.UI.Image _healthBar;
 
     private void Awake()
     {
-        healthBar = GetComponent<UnityEngine.UI.Image>();
+        _healthBar = GetComponent<UnityEngine.UI.Image>();
     }
 
     private void Start()
     {
-        EventInt.EventInt += ChangeHealthBar;
+        _eventInt.EventInt += ChangeHealthBar;
     }
 
     private void ChangeHealthBar(int healthAmount)
     {
-        healthBar.fillAmount -= healthAmount * 0.01f;
+        _healthBar.fillAmount -= healthAmount * 0.01f;
     }
 }

@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class OpenUIListener : MonoBehaviour
 {
-    [SerializeField] GameObject[] UIMenu;
+    [SerializeField] private GameObject[] UIMenu;
+
     private void OnEnable() 
     {
         ScriptableEventUI.OpenUIAction += OpenUI;
     }
+    
     private void OnDisable() 
     {
         ScriptableEventUI.OpenUIAction -= OpenUI;

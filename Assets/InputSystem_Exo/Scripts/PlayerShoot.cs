@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    [SerializeField] GameObject projectilePrefab;
+    [SerializeField] private GameObject projectilePrefab;
 
     public void Fire()
     {

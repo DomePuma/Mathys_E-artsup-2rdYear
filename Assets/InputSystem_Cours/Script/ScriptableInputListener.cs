@@ -3,16 +3,17 @@ using UnityEngine;
 
 public class ScriptableInputListener : MonoBehaviour
 {
-    [SerializeField] ScriptableInput scriptableInput;
     public static Action HitAction;
+    [SerializeField] private ScriptableInput _scriptableInput;
+    
     private void OnEnable() 
     {
-        scriptableInput.OnPerformed += InvokeEvent;
+        _scriptableInput.OnPerformed += InvokeEvent;
     }
 
     private void OnDisable() 
     {
-        scriptableInput.OnPerformed -= InvokeEvent;
+        _scriptableInput.OnPerformed -= InvokeEvent;
     }
     
     private void InvokeEvent()

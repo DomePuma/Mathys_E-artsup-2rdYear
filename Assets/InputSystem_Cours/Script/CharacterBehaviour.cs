@@ -26,5 +26,4 @@ public class CharacterBehaviour : MonoBehaviour
     {
         TakeDamage(10);
     }
-    
 }
